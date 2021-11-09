@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const array = [
+          {
+            username: "David",
+            status: "online",
+            lastActivity: 10,
+          },
+          {
+            username: "Lucy",
+            status: "offline",
+            lastActivity: 22,
+          },
+          {
+            username: "Bob",
+            status: "online",
+            lastActivity: 104,
+          },
+        ];
+      const whosOnline = (friends) => {
+        
+        const onLineArray = [];
+        const offLineArray = [];
+        const awayArray = [];
+        const newObj=[]
+        array.filter((item, index) => {
+          if (item.status == "online" && item.lastActivity > 10) {
+            item.status= "away";
+            awayArray.push(item.username);
+            if(awayArray.length){
+              newObj.push({"away": awayArray})
+              console.log(newObj); }}
+
+          if (item.status == "offline") {
+            offLineArray.push(item.username);
+            if(offLineArray.length){
+              newObj.push({offline:offLineArray})  }
+          }
+          if (item.status == "online") {
+            onLineArray.push(item.username);
+            if(onLineArray.length){
+              newObj.push({online:onLineArray})
+            }
+          }
+           
+            }
+         );
+        return newObj;
+      };
+    </script>
+  </body>
+</html>
