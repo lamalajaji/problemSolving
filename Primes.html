@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function primes(start, end) {
+        //Your code here
+        const primes = [];
+        for (let i = start; i <= end; i++) {
+          primes.push(i);
+        }
+        primes.filter((prime) => {
+          if (prime % 2 !== 0 && prime % 3 !== 0) {
+            return prime;
+          }
+        });
+      }
+  
+
+/////// another try
+      function primes(start, end){
+	//Your code here
+  let primes = []
+  
+  for(let i=start ;i<= end; i++){
+   for (let j = 2; j <=end; j++){
+     if (i %j !== 0 ){
+       primes.push(i)
+     }
+   }
+  }
+  }
+    </script>
+  </body>
+</html>
