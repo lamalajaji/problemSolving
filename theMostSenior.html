@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const list1 = [
+  { firstName: 'Gabriel', lastName: 'X.', country: 'Monaco', continent: 'Europe', age: 49, language: 'PHP' },
+  { firstName: 'Odval', lastName: 'F.', country: 'Mongolia', continent: 'Asia', age: 38, language: 'Python' },
+  { firstName: 'Emilija', lastName: 'S.', country: 'Lithuania', continent: 'Europe', age: 19, language: 'Python' },
+  { firstName: 'Sou', lastName: 'B.', country: 'Japan', continent: 'Asia', age: 49, language: 'PHP' },
+];
+
+
+
+function findSenior(list) {
+  // thank you for checking out the Coding Meetup kata :)
+  /// first i thought if i store all ages in an array to find the max age
+  const agesArr= [];
+  list.map((dev)=> {
+    agesArr.push(dev.age) 
+      console.log(agesArr);
+    return agesArr
+   
+  })
+  //// then find the max age to compare it with each age in the array 
+ const Senior = Math.max.apply(Math,agesArr);
+ ///// then return all objects that have the Senior age "max"
+return list.filter(dev => dev.age === Senior )
+ 
+}
+      
+findSenior(list1)
+    </script>
+  </body>
+</html>
